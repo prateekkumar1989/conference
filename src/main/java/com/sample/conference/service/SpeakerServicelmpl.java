@@ -3,7 +3,6 @@ package com.sample.conference.service;
 import com.sample.conference.model.Speaker;
 import com.sample.conference.repository.ISpeakerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -38,6 +37,7 @@ public class SpeakerServicelmpl implements ISpeakerService {
 
     // (4) Non-Stereotype @Autowired using setter injection
     private ISpeakerRepository repository; // If field @Autowired then different from setter injection
+
     @Autowired
     public void setSpeakerRepository(ISpeakerRepository repository) {
         this.repository = repository;
@@ -58,7 +58,7 @@ public class SpeakerServicelmpl implements ISpeakerService {
      */
 
     @Override
-    public List <Speaker> findAll() {
+    public List<Speaker> findAll() {
         return repository.findAll();
     }
 

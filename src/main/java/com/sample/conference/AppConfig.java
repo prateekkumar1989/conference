@@ -1,17 +1,12 @@
 package com.sample.conference;
 
-import com.sample.conference.model.Speaker;
 import com.sample.conference.repository.HibernateSpeakerRepositorylmpl;
 import com.sample.conference.repository.ISpeakerRepository;
 import com.sample.conference.service.ISpeakerService;
 import com.sample.conference.service.SpeakerServicelmpl;
-import jakarta.annotation.PostConstruct;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-
-import java.util.List;
 
 @Configuration
 @ComponentScan({

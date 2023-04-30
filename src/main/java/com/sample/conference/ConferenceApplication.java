@@ -25,6 +25,7 @@ public class ConferenceApplication {
 
         System.out.println(service.findAll().get(0).getFirstName());
     }
+
     public static void printBeans(ApplicationContext appContext) {
         System.out.println(Arrays.asList(appContext.getBeanDefinitionNames()));
     }
