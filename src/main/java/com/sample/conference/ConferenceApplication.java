@@ -2,7 +2,6 @@ package com.sample.conference;
 
 import com.sample.conference.repository.ISpeakerRepository;
 import com.sample.conference.service.ISpeakerService;
-import com.sample.conference.service.SpeakerServicelmpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -12,7 +11,7 @@ public class ConferenceApplication {
     public static void main(String[] args) {
         // (1) Without Spring Interface = Implementation with has-a dependency non-injected.
         /*
-        ISpeakerService service = new SpeakerServicelmpl();
+        ISpeakerService service = new SpeakerServiceImpl();
         System.out.println(service.findAll().get(0).getFirstName());
         */
 
