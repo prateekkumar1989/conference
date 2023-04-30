@@ -18,13 +18,15 @@ public class SpeakerServicelmpl implements ISpeakerService {
     // (2) Non-Stereotype Setter Injection using @Bean
 
     private ISpeakerRepository repository;
-    public void setSpeakerRepository(ISpeakerRepository repository) {
-    this.repository = repository;
-    System.out.println("SpeakServicelmpl setter:" + this.repository);
-    }
+
     // compiler adds no-arg constructor if no other constructor declared
     public SpeakerServicelmpl() {
-    System.out.println("SpeakServicelmpl no args constructor");
+        System.out.println("SpeakServicelmpl no args constructor");
+    }
+
+    public void setSpeakerRepository(ISpeakerRepository repository) {
+        this.repository = repository;
+        System.out.println("SpeakServicelmpl setter:" + this.repository);
     }
 
 
