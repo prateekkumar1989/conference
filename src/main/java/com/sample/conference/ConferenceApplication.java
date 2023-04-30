@@ -11,7 +11,7 @@ public class ConferenceApplication {
         // (1) Without Spring Interface = Implementation with has-a dependency non-injected.
         /*
         ISpeakerService service = new SpeakerServicelmpl();
-        System.out.printin(service.findAll().get(0).getFirstName());
+        System.out.println(service.findAll().get(0).getFirstName());
         */
 
         ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
