@@ -1,5 +1,6 @@
 package com.sample.conference;
 
+import com.sample.conference.repository.ISpeakerRepository;
 import com.sample.conference.service.ISpeakerService;
 import com.sample.conference.service.SpeakerServicelmpl;
 import org.springframework.context.ApplicationContext;
@@ -10,17 +11,19 @@ import java.util.Arrays;
 public class ConferenceApplication {
     public static void main(String[] args) {
         // (1) Without Spring Interface = Implementation with has-a dependency non-injected.
+        /*
         ISpeakerService service = new SpeakerServicelmpl();
         System.out.println(service.findAll().get(0).getFirstName());
+        */
 
         ApplicationContext appContext = new AnnotationConfigApplicationContext(AppConfig.class);
         printBeans(appContext);
 
-        //ISpeakerService service = appContext.getBean("speakerService", ISpeakerService.class);
-        //ISpeakerRepository repository = appContext.getBean("repository", ISpeakerRepository.class);
+        ISpeakerService service = appContext.getBean("speakerService", ISpeakerService.class);
+        ISpeakerRepository repository = appContext.getBean("repository", ISpeakerRepository.class);
 
         System.out.println(service);
-        //System.out.printin(repository);
+        System.out.println(repository);
 
         System.out.println(service.findAll().get(0).getFirstName());
     }

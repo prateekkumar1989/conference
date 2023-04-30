@@ -11,12 +11,12 @@ import java.util.List;
 public class SpeakerServicelmpl implements ISpeakerService {
 
     // (1) Without Spring Interface = Implementation with has-a dependency non-injected.
-
+    /*
     private ISpeakerRepository repository = new HibernateSpeakerRepositorylmpl();
-
+    */
 
     // (2) Non-Stereotype Setter Injection using @Bean
-    /*
+
     private ISpeakerRepository repository;
     public void setSpeakerRepository(ISpeakerRepository repository) {
     this.repository = repository;
@@ -26,7 +26,7 @@ public class SpeakerServicelmpl implements ISpeakerService {
     public SpeakerServicelmpl() {
     System.out.println("SpeakServicelmpl no args constructor");
     }
-    */
+
 
     // (3) Non-Stereotype Constructor Injection using @Bean
     /*
