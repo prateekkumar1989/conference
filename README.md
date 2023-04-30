@@ -1,3 +1,3 @@
 # conference
 
-Spring Fundamentals
+Spring Fundamentals only for Java 11

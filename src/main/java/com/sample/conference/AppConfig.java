@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     // (2) Non-Stereotype Setter Injection using @Bean
-
+    /*
     @Bean("speakerService") // if just @Bean then method name has to be speakerService() because main() requests by name
     public ISpeakerService getSpeakerService() {
         SpeakerServicelmpl speakerService = new SpeakerServicelmpl(); // ISpeakerService does not have setter obviously
@@ -27,7 +27,7 @@ public class AppConfig {
     public ISpeakerRepository getSpeakerRepository() {
         ISpeakerRepository repository = new HibernateSpeakerRepositorylmpl();
         return repository;
-    }
+    }*/
 
     // (3) Non-Stereotype Constructor Injection using @Bean
     /*
